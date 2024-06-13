@@ -32,6 +32,7 @@ def load_credentials_and_initialize_client(service_name, profile_name='default')
     """
     # Load the AWS credentials file
     config = configparser.ConfigParser()
+    print(config)
     config.read(AWS_CREDENTIALS_FILE_PATH)
 
     if profile_name in config:
