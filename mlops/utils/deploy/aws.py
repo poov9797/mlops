@@ -32,8 +32,18 @@ def load_credentials_and_initialize_client(service_name, profile_name='default')
     """
     # Load the AWS credentials file
     config = configparser.ConfigParser()
-    print(config)
-    config.read(AWS_CREDENTIALS_FILE_PATH)
+    # config.read(AWS_CREDENTIALS_FILE_PATH)
+
+    ##############
+    result = config.read(AWS_CREDENTIALS_FILE_PATH)
+
+    if AWS_CREDENTIALS_FILE_PATH in result:
+        print(f"Successfully read {AWS_CREDENTIALS_FILE_PATH}")
+        # Further processing or validation of credentials can be done here
+    else:
+        print(f"Failed to read {AWS_CREDENTIALS_FILE_PATH}")
+
+    ###################
 
     if profile_name in config:
         aws_access_key_id = config[profile_name]['aws_access_key_id']
