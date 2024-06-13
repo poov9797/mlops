@@ -60,6 +60,7 @@ IAM_CLIENT = load_credentials_and_initialize_client('iam')
 
 def search_policy_by_name(policy_name):
     try:
+        IAM_CLIENT = load_credentials_and_initialize_client('iam')
         paginator = IAM_CLIENT.get_paginator('list_policies')
 
         for response in paginator.paginate(Scope='Local'):
