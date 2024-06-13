@@ -5,7 +5,7 @@ from typing import Optional
 import boto3
 import requests
 
-AWS_CREDENTIALS_FILE_PATH = os.path.expanduser('~/.aws/credentials')
+AWS_CREDENTIALS_FILE_PATH = os.path.expanduser('~/Users/pravin/.aws/credentials')
 IAM_USER_NAME = 'MageDeployer'
 IAM_USER_NAME_CICD = 'MageContinuousIntegrationDeployer'
 TERRAFORM_AWS_URL = 'https://raw.githubusercontent.com/mage-ai/mage-ai-terraform-templates/master/aws/policies'

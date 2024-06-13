@@ -69,7 +69,7 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: terraform_setup_docs
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: blue
   configuration:
     file_path: unit_3_observability/custom/infrastructure_setup.py
@@ -89,7 +89,7 @@ blocks:
   upstream_blocks:
   - permissions
   uuid: infrastructure_setup
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: pink
   configuration:
     file_path: unit_3_observability/custom/teardown_deployed_resources.py
@@ -109,7 +109,7 @@ blocks:
   upstream_blocks:
   - infrastructure_setup
   uuid: teardown_deployed_resources
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: teal
   configuration:
     file_path: unit_3_observability/custom/deploy.py
